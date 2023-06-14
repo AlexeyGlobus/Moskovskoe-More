@@ -4,20 +4,18 @@ import { createRouter, createWebHistory } from 'vue-router'
 import AppHome from './views/AppHome.vue';
 import AppAnother from './views/AppAnother.vue';
 
-console.log(AppHome)
-
 export default VueRouter.createRouter({
     routes: [
         {
             path: '/',
             name: 'home',
-            component: AppHome,
+            component: AppHome
         },
         {
             path: '/another/:id(\\d+)',
             name: 'Another page',
-            component: AppAnother,
+            component: AppAnother
         }
     ],
-    history: createWebHistory(),
+    history: createWebHistory()
 });

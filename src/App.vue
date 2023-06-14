@@ -9,31 +9,28 @@
 </template>
 
 <script>
-export default {
-  components: {
-  },
-  data: function () {
-    return {
+  export default {
+    components: {
+    },
+    data: function () {
+      return {
+      }
+    },
+    mounted() {
+    },
+    methods: {
     }
-  },
-  mounted() {
-  },
-  methods: {
   }
-}
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 
 :root {
-  --font: Roboto, sans-serif;
   --textColor: #374961;
   --linkActiveColor: #41b783;
 }
 
 #app {
-  font-family: var(--font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
