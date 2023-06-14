@@ -4,6 +4,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import AppHome from './views/AppHome.vue';
 import AppAnother from './views/AppAnother.vue';
 
+console.log(AppHome)
+
 export default VueRouter.createRouter({
     routes: [
         {

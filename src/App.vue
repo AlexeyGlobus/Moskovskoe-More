@@ -8,6 +8,21 @@
   </div>
 </template>
 
+<script>
+export default {
+  components: {
+  },
+  data: function () {
+    return {
+    }
+  },
+  mounted() {
+  },
+  methods: {
+  }
+}
+</script>
+
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 
@@ -25,9 +40,8 @@
   color: var(--textColor);
 }
 
-
-.nav {
-  padding: 30px 0 100px 0;
+.logo {
+  width: 20%;
 }
 
 a {
