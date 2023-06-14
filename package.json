@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "core-js": "^3.31.0",
+    "lodash": "^4.17.21",
     "url-loader": "^4.1.1",
     "vue": "^3.3.4",
     "vue-router": "^4.2.2"
