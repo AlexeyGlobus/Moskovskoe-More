@@ -31,12 +31,6 @@
         </v-list>
       </v-navigation-drawer>
 
-
-      <div class="nav">
-          <router-link to="/">Home</router-link>|
-          <router-link to="/another/22">Another page ID=22</router-link>
-      </div>
-
       <v-main>
         <v-card-text>
           <router-view></router-view>
