@@ -1,15 +1,16 @@
 <template>
   <div id="home">
-    <img class="logo" src="../assets/images/logo.svg" alt="logo" />
+<!--     <img class="logo" src="../assets/images/logo.svg" alt="logo" /> -->
 
-    <h1>Hello Московское море!</h1>
     <table v-if="isReady">
       <tr> 
+        <td>Номер</td> 
         <td>ВРУ</td> 
         <td>Участок</td> 
         <td>Владелец</td> 
       </tr>
       <tr v-for="counter in counters">
+        <td> {{ counter.number }} </td>
         <td> {{ counter.rack }} </td>
         <td> {{ counter.place }} </td>
         <td> {{ counter.owner }} </td>
