@@ -1,27 +1,42 @@
 <template>
   <div id="home">
-<!--     <img class="logo" src="../assets/images/logo.svg" alt="logo" /> -->
-
-    <table v-if="isReady">
-      <tr> 
-        <td>Номер</td> 
-        <td>ВРУ</td> 
-        <td>Участок</td> 
-        <td>Владелец</td> 
-      </tr>
-      <tr v-for="counter in counters">
-        <td> {{ counter.number }} </td>
-        <td> {{ counter.rack }} </td>
-        <td> {{ counter.place }} </td>
-        <td> {{ counter.owner }} </td>
-      </tr>
-    </table>
+  <!--     <img class="logo" src="../assets/images/logo.svg" alt="logo" /> -->
+    <v-table v-if="isReady">
+      <thead>
+        <tr>
+          <th class="text-left">
+            Номер
+          </th>
+          <th class="text-left">
+            ВРУ
+          </th>
+          <th class="text-left">
+            Участок
+          </th>
+          <th class="text-left">
+            Владелец
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          v-for="counter in filteredCounters"
+          :key="counter.number"
+        >
+          <td> {{ counter.number }} </td>
+          <td> {{ counter.rack }} </td>
+          <td> {{ counter.place }} </td>
+          <td> {{ counter.owner }} </td>
+        </tr>
+      </tbody>
+    </v-table>
   </div>
 </template>
 
 <script>
   const CountersList = require('../assets/data/list.json');
   export default {
+    props: ['keyword'],
     components: {
     },
     data: function () {
@@ -29,7 +44,6 @@
       }
     },
     mounted() {
-      console.log(this.counters)
     },
     methods: {
     },
@@ -39,6 +53,13 @@
       },
       counters() {
         return CountersList;
+      },
+      filteredCounters() {
+        return CountersList.filter(counter => {
+          return counter.number.indexOf(this.keyword) !== -1 || 
+          counter.owner.indexOf(this.keyword) !== -1 ||
+          counter.rack.indexOf(this.keyword) !== -1;
+        });
       }
     }
   }

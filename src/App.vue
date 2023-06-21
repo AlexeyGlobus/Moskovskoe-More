@@ -1,16 +1,23 @@
 <template>
   <v-card>
-    <v-layout>
+    <v-layout style="min-height: 99vh">
       <v-app-bar color="primary" prominent>
         <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
-        <v-spacer></v-spacer>
-
-        <v-btn variant="text" icon="mdi-magnify"></v-btn>
-
-        <v-btn variant="text" icon="mdi-filter"></v-btn>
-
-        <v-btn variant="text" icon="mdi-dots-vertical"></v-btn>
+        <v-text-field
+          style="min-width: 100px; max-width: 90%;"
+          class="flex-grow-1 flex-shrink-0"
+          :loading="loading"
+          density="compact"
+          variant="solo"
+          label="Поиск"
+          append-inner-icon="mdi-magnify"
+          single-line
+          hide-details
+          v-model="keyword"
+        >
+        </v-text-field>
+        
       </v-app-bar>
 
       <v-navigation-drawer
@@ -33,7 +40,7 @@
 
       <v-main>
         <v-card-text>
-          <router-view></router-view>
+          <router-view :keyword="keyword"></router-view>
         </v-card-text>
       </v-main>
     </v-layout>
@@ -48,6 +55,7 @@ export default {
   data: () => {
     return {
       drawer: false,
+      keyword: '',
         items: [
           {
             title: 'Home',
@@ -59,6 +67,6 @@ export default {
           }
       ]
     }
-  },
+  }
 }
 </script>
