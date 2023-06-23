@@ -11,7 +11,10 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist"),
+    filename: "[name].js",
+    sourceMapFilename: "[name].js.map"
   },
+  devtool: "source-map",
   module: {
     rules: [
       {
@@ -23,13 +26,13 @@ module.exports = {
       },
       {
         test: /\.vue$/,
-        loader: "vue-loader",
+        loader: "vue-loader"
       },
       {
         test: /\.(eot|ttf|woff|woff2)(\?\S*)?$/,
         loader: "file-loader",
         options: {
-          name: "[name][contenthash:8].[ext]",
+          name: "[name][contenthash:8].[ext]"
         }
       },
       {
@@ -37,7 +40,7 @@ module.exports = {
         loader: "file-loader",
         options: {
           outputPath: "assets",
-          esModule: false,
+          esModule: false
         }
       },
       {
@@ -45,7 +48,7 @@ module.exports = {
         use: [
           "style-loader",
           "css-loader",
-          "sass-loader",
+          "sass-loader"
         ]
       }
     ]
@@ -55,11 +58,11 @@ module.exports = {
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash:8].css",
-      chunkFilename: "[name].[contenthash:8].css",
+      chunkFilename: "[name].[contenthash:8].css"
     }),
     new htmlWebpackPlugin({
       template: path.resolve(__dirname, "public", "index.html"),
-      favicon: "./public/favicon.ico",
+      favicon: "./public/favicon.ico"
     })
   ],
   resolve: {

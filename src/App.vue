@@ -7,7 +7,6 @@
         <v-text-field
           style="min-width: 100px; max-width: 90%;"
           class="flex-grow-1 flex-shrink-0"
-          :loading="loading"
           density="compact"
           variant="solo"
           label="Поиск"
