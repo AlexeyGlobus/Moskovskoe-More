@@ -61,8 +61,8 @@ export default {
             url: '/',
           },
           {
-            title: 'Another page ID=22',
-            url: '/another/22',
+            title: 'Another page',
+            url: '/counters/22',
           }
       ]
     }

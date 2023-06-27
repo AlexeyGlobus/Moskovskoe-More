@@ -23,7 +23,10 @@
           v-for="counter in filteredCounters"
           :key="counter.number"
         >
-          <td> {{ counter.number }} </td>
+          <td>
+          <router-link :to="'/counters/' + counter.id"> {{ counter.number }} </router-link>
+        </td>
+<!--           <td> {{ counter.number }}  ( {{ counter.id }}  )</td> -->
           <td> {{ counter.rack }} </td>
           <td> {{ counter.place }} </td>
           <td> {{ counter.owner }} </td>

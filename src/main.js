@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 
-//import * as VueCordova from 'vue-cordova'
+import * as VueCordova from 'vue-cordova'
 
 // Router
 import * as VueRouter from 'vue-router';
@@ -22,7 +22,7 @@ import * as directives from 'vuetify/directives';
 
 const vuetify = createVuetify({
   components,
-  directives,
+  directives
 });
 
 loadFonts();
@@ -30,4 +30,5 @@ loadFonts();
 createApp(App)
   .use(router)
   .use(vuetify)
+  .use(VueCordova)
   .mount('#app');

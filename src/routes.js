@@ -2,7 +2,7 @@ import * as VueRouter from 'vue-router';
 import { createRouter, createWebHistory } from 'vue-router'
 
 import AppHome from './views/AppHome.vue';
-import AppAnother from './views/AppAnother.vue';
+import AppCounter from './views/AppCounter.vue';
 
 export default VueRouter.createRouter({
     routes: [
@@ -12,9 +12,9 @@ export default VueRouter.createRouter({
             component: AppHome
         },
         {
-            path: '/another/:id(\\d+)',
-            name: 'Another page',
-            component: AppAnother
+            path: '/counters/:id(\\d+)',
+            name: 'Counter page',
+            component: AppCounter
         }
     ],
     history: createWebHistory()
