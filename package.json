@@ -28,8 +28,10 @@
   "dependencies": {
     "@mdi/font": "5.9.55",
     "@vue/cli-service": "^5.0.8",
+    "cordova-plugin-nano-sqlite": "^1.7.0",
     "core-js": "^3.31.0",
     "lodash": "^4.17.21",
+    "nano-sql": "^1.8.5",
     "roboto-fontface": "*",
     "url-loader": "^4.1.1",
     "vue": "^3.3.4",
