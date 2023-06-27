@@ -6,6 +6,10 @@ import * as VueCordova from 'vue-cordova'
 import * as VueRouter from 'vue-router';
 import router from './routes.js';
 
+// Axios
+import axios from 'axios';
+import VueAxios from 'vue-axios';
+
 
 // Lodash
 import _ from 'lodash';
@@ -31,4 +35,5 @@ createApp(App)
   .use(router)
   .use(vuetify)
   .use(VueCordova)
+  .use(VueAxios, axios)
   .mount('#app');

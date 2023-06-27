@@ -28,6 +28,7 @@
   "dependencies": {
     "@mdi/font": "5.9.55",
     "@vue/cli-service": "^5.0.8",
+    "axios": "^1.4.0",
     "cordova-plugin-nano-sqlite": "^1.7.0",
     "core-js": "^3.31.0",
     "lodash": "^4.17.21",
